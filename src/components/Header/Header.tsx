@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import logo from './campusConnectLogo.webp'; 
 import './Header.css';
 
 interface HeaderProps {
@@ -21,7 +22,8 @@ const Header: React.FC<HeaderProps> = ({ setIsAuthorized, isAuthorized, logout }
       {isAuthorized && (
         <button className="profile-button" onClick={goToProfile}>Profile</button>
       )}
-      <h1>
+      <h1 className="header-title">
+      <img src={logo} alt="Campus Connect Logo" className="header-logo" />
         {isAuthorized ? (
           <Link to="/home">Campus Connect</Link>  
         ) : (

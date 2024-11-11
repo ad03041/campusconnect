@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './UnauthorizedPage.css';
+import logo from '../Header/campusConnectLogo.webp'; 
 
 // Dummy event data with submitter name and contact info
 const events = [
@@ -45,7 +46,7 @@ const UnauthorizedPage: React.FC = () => {
             <button className="header-button">Login</button>
           </Link>
         </div>
-        <h1>Campus Connect</h1>
+        <h1><img src={logo} alt="Campus Connect Logo" className="header-logo" /> Campus Connect</h1>
         <div className="right-buttons">
           <Link to="/signup">
             <button className="header-button">Sign Up</button>
@@ -54,7 +55,7 @@ const UnauthorizedPage: React.FC = () => {
       </header>
 
       <h1 className="event-header">All Events</h1>
-      <p className='event-head'>Here are all the events happening:</p>
+      <p className="event-head">Here are all the events happening:</p>
 
       <div className="event-list">
         {events.map((event) => (
