@@ -22,6 +22,15 @@ const ProfilePage: React.FC<{ setIsAuthorized: React.Dispatch<React.SetStateActi
     const handleSaveChanges = (e: React.FormEvent) => {
         e.preventDefault();
         console.log('Form Data:', formData);
+
+        // Reset form fields after submission
+        setFormData({
+            firstName: '',
+            lastName: '',
+            email: '',
+            password: ''
+        });
+
         // Add your save logic here
     };
 
