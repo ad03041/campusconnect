@@ -48,3 +48,12 @@ export default tseslint.config({
   },
 })
 ```
+# campusconnect
+
+**campusconnect** is a social app designed to help University of Georgia (UGA) students discover campus events, connect with others attending the same events, and make new friends. It allows users to add events, see who’s going, and find companions for those events.
+
+## Features
+
+- **Event Discovery**: Browse and view events happening at UGA.
+- **Event RSVP**: Add your own events or RSVP to ones hosted by other students.
+- **Social Connections**: See who else is attending and connect with fellow students.
