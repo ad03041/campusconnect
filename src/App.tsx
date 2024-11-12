@@ -4,7 +4,6 @@ import Header from './components/Header/Header';
 import HomePage from './components/HomePage/page';
 import AddEventPage from './components/AddEventsPage/page';
 import Login from './components/Auth/Login';
-import Signup from './components/Auth/Signup';
 import UnauthorizedPage from './components/UnauthorizedPage/Page';
 import ProfilePage from './components/ProfilePage/page';
 import './App.css';
