@@ -65,7 +65,7 @@ const AddEventPage: React.FC = () => {
             required
           />
         </div>
-        {/* New field for submitter's name */}
+
         <div className="form-group">
           <label>Your Name</label>
           <input
@@ -75,7 +75,7 @@ const AddEventPage: React.FC = () => {
             required
           />
         </div>
-        {/* New field for contact information */}
+
         <div className="form-group">
           <label>Contact Information</label>
           <input

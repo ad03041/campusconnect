@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './Profile.css';
 
 const ProfilePage: React.FC<{ setIsAuthorized: React.Dispatch<React.SetStateAction<boolean>> }> = ({ setIsAuthorized }) => {
@@ -23,40 +23,36 @@ const ProfilePage: React.FC<{ setIsAuthorized: React.Dispatch<React.SetStateActi
         e.preventDefault();
         console.log('Form Data:', formData);
 
-        // Reset form fields after submission
         setFormData({
             firstName: '',
             lastName: '',
             email: '',
             password: ''
         });
-
-        // Add your save logic here
     };
 
     // Function to handle logout
     const handleLogout = () => {
-        // Clear the authentication state here
         console.log('Logging out...');
-        setIsAuthorized(false); // Update the state to reflect the user is logged out
-
-        // Redirect to login or unauthorized homepage
-        navigate('/'); // Redirecting to the home page (which would be UnauthorizedPage or Login)
+        setIsAuthorized(false); 
+        navigate('/'); 
     };
 
     return (
         <div className="container">
-            {/* Top Bar */}
             <header className="topBar">
                 <div className="greeting">Hello, [User's Name]</div>
-                <div className="projectName">CampusConnect</div>
+                <div className='title-cc'>
+                    <h1>
+                        <Link to="/home" className="home-link">Campus Connect</Link>
+                    </h1>
+                </div>
                 <div className="actions">
                     <button className="button" onClick={() => navigate('/add-event')}>+Add Event</button>
-                    <button className="button" onClick={handleLogout}>Logout</button> {/* Logout button */}
+                    <button className="button" onClick={handleLogout}>Logout</button>
                 </div>
             </header>
 
-            {/* Profile Section */}
             <main className="profileSection">
                 <div className="profileBox">
                     <h2 className="title">Profile Details</h2>
@@ -101,7 +97,6 @@ const ProfilePage: React.FC<{ setIsAuthorized: React.Dispatch<React.SetStateActi
                             placeholder="Enter password" 
                         />
 
-                        {/* Save Changes Button */}
                         <button className="saveButton" type="submit">Save Changes</button>
                     </form>
                 </div>
