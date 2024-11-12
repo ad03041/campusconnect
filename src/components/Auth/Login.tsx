@@ -20,7 +20,7 @@ const Login: React.FC<LoginProps> = ({ setIsAuthorized }) => {
     <div className="auth-card">
       <h1>Login</h1>
       <div className="input-box">
-        <label htmlFor="userName">User Name:</label>
+        <label htmlFor="userName">Username:</label>
         <input type="text" id="userName" name="userName" />
       </div>
       <div className="input-box">

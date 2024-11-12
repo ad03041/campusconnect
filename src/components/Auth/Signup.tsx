@@ -10,8 +10,8 @@ const Signup: React.FC<SignupProps> = ({ setIsAuthorized }) => {
   const navigate = useNavigate();
 
   const handleSignup = () => {
-    setIsAuthorized(true); 
-    navigate('/home'); // Redirect to homepage after signup
+    setIsAuthorized(true); //Change when we implment database
+    navigate('/home'); // Redirect user to homepage after they signup
   };
 
   return (
@@ -20,7 +20,7 @@ const Signup: React.FC<SignupProps> = ({ setIsAuthorized }) => {
     <div className="auth-card">
       <h1>Sign Up</h1>
       <div className="input-box">
-        <label htmlFor="userName">User Name:</label>
+        <label htmlFor="userName">Enter a username:</label>
         <input type="text" id="userName" name="userName" />
       </div>
       <div className="input-box">
