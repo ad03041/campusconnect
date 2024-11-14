@@ -13,23 +13,32 @@ const Header: React.FC<HeaderProps> = ({ setIsAuthorized, isAuthorized, logout }
   const navigate = useNavigate();
 
   const goToProfile = () => {
-    navigate('/profile');  // Navigate to the profile page
+    navigate('/profileHome');  // Navigate to the profile page
+  };
+
+  const goToSettings = () => {
+    navigate('/profile');  // Navigate to settings page
   };
 
   return (
     <div className="header">
-      {/* Show profile button if authorized */}
+      {/* Show profile and settings button if authorized */}
       {isAuthorized && (
-        <button className="profile-button" onClick={goToProfile}>Profile</button>
+        <div className="header-buttons">
+          <button className="profile-button" onClick={goToProfile}>Profile</button>
+          <button className="settings-button" onClick={goToSettings}>Settings</button>
+        </div>
       )}
+      
       <h1 className="header-title">
-      <img src={logo} alt="Campus Connect Logo" className="header-logo" />
+        <img src={logo} alt="Campus Connect Logo" className="header-logo" />
         {isAuthorized ? (
           <Link to="/home">Campus Connect</Link>  
         ) : (
           'Campus Connect'
         )}
       </h1>
+
       {/* Show logout button only if authorized */}
       {isAuthorized && (
         <button className="logout-button" onClick={logout}>Logout</button>

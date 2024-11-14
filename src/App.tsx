@@ -7,6 +7,7 @@ import Login from './components/Auth/Login';
 import Signup from './components/Auth/Signup';
 import UnauthorizedPage from './components/UnauthorizedPage/Page';
 import ProfilePage from './components/ProfilePage/page';
+import ProfileHome from './components/ProfileHomepage/page';  // <-- Import ProfileHome here
 import './App.css';
 
 const App: React.FC = () => {
@@ -60,6 +61,10 @@ const AppRoutes: React.FC<{ isAuthorized: boolean, setIsAuthorized: React.Dispat
         <Route
           path="/profile"
           element={isAuthorized ? <ProfilePage setIsAuthorized={setIsAuthorized} /> : <Navigate to="/" />}
+        />
+         <Route
+          path="/profileHome"
+          element={isAuthorized ? <ProfileHome setIsAuthorized={setIsAuthorized} /> : <Navigate to="/" />}  
         />
       </Routes>
     </>

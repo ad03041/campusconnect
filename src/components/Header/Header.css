@@ -33,7 +33,12 @@
   outline: none; 
 }
 
-.profile-button, .logout-button {
+.header-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.profile-button, .settings-button, .logout-button {
   background-color: #ffadad; 
   border: none;
   padding: 10px 15px;
@@ -51,10 +56,19 @@
   line-height: 40px; 
 }
 
-.profile-button:hover, .logout-button:hover {
+.profile-button:hover, .settings-button:hover, .logout-button:hover {
   background-color: #ff758e; 
 }
 
 .logout-button {
   margin-left: 20px; 
+}
+
+/* Increased spacing between profile and settings button */
+.header-buttons > .profile-button {
+  margin-right: 20px; /* Add more margin here to space them out */
+}
+
+.settings-button {
+  border-radius: 5px; /* Keep the settings button square or rounded */
 }
